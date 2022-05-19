@@ -1,7 +1,8 @@
 import { Link } from "@chakra-ui/react"
 import Image from "next/image"
-import { Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Text, useColorModeValue } from "@chakra-ui/react"
 import styled from "@emotion/styled"
+import {AiOutlineHome} from 'react-icons/ai'
 
 const LogoBox = styled.span`
 	font-weight: bold;
@@ -18,7 +19,20 @@ const LogoBox = styled.span`
 	&:hover img {
 		transform: rotate(360deg);
 	}
+
+	svg {
+		transition: 1000ms ease;
+	}
+	&:hover svg {
+		transform: rotate(360deg);
+	}
 `
+const styl = {
+	transition: "1000ms ease",
+	"&:hover": {
+		transform: "rotate(360deg)"
+	}
+}
 
 const Logo = () => {
 	const homeImg = `/images/home.png`
@@ -27,7 +41,8 @@ const Logo = () => {
 		<Link href="/">
 			{/* <a> */}
 				<LogoBox>
-					<Image src={homeImg} width={20} height={20} alt="home icon"/>
+					<Box></Box>
+					<AiOutlineHome></AiOutlineHome>
 					<Text
 						color={useColorModeValue("gray.800", "whiteAlpha.900")}
 						fontFamily="M PLUS Rounded 1c, sans-serif"
@@ -36,6 +51,7 @@ const Logo = () => {
 					>
                         Wycliff Lumumba
                     </Text>
+					{/* <Image src={homeImg} width={20} height={20} alt="home icon"/> */}
 				</LogoBox>
 			{/* </a> */}
 		</Link>

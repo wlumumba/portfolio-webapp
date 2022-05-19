@@ -13,8 +13,10 @@ import {
 	MenuButton,
 	IconButton,
 	useColorModeValue,
+	Text,
 } from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 import ThemeToggleButton from "./theme-toggle"
 
 // Link item
@@ -55,7 +57,7 @@ const Navbar = props => {
 				maxW="container.md"
 				wrap="wrap"
 				align="center"
-				justify="space-between"
+				// justify="space-between"
 			>
 				<Flex align="center" mr={5}>
 					<Heading as="h1" size="md" letterSpacing={""}>
@@ -78,12 +80,18 @@ const Navbar = props => {
 						Resume
 					</LinkItem>
 					<LinkItem href="https://github.com/wlumumba" path={path}>
-						GitHub
+						<Box display="inline-flex" align="center" alignItems="center">
+							<AiFillGithub />
+							<Text ml={3}>Github</Text>
+						</Box>
 					</LinkItem>
 					<LinkItem href="https://www.linkedin.com/in/wlumumba/" path={path}>
-						LinkedIn
+						<Box display="inline-flex" align="center" alignItems="center">
+							<AiFillLinkedin />
+							<Text ml={3}>LinkedIn</Text>
+						</Box>
+						
 					</LinkItem>
-
 				</Stack>
 
 				<Box flex={1} align="right">
@@ -100,17 +108,17 @@ const Navbar = props => {
 								<NextLink href="/" passHref>
 									<MenuItem as={Link}>About</MenuItem>
 								</NextLink>
+								<NextLink href="/works" passHref>
+									<MenuItem as={Link}>Featured Work</MenuItem>
+								</NextLink>
 								<NextLink href="/resume" passHref>
 									<MenuItem as={Link}>Resume</MenuItem>
 								</NextLink>
-								<NextLink href="/works" passHref>
-									<MenuItem as={Link}>Projects</MenuItem>
-								</NextLink>
 								<NextLink href="https://github.com/wlumumba" passHref>
-									<MenuItem as={Link}>Github</MenuItem>
+									<MenuItem as={Link} icon={<AiFillGithub size="1rem"/>}>Github</MenuItem>
 								</NextLink>
 								<NextLink href="https://www.linkedin.com/in/wlumumba/" passHref>
-									<MenuItem as={Link}>LinkedIn</MenuItem>
+									<MenuItem as={Link} icon={<AiFillLinkedin size="1rem"/>}>LinkedIn</MenuItem>
 								</NextLink>
 							</MenuList>
 						</Menu>

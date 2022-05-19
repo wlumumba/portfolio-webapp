@@ -20,7 +20,7 @@ const Works = () => {
 							id="stream-ez"
 							title="StreamEZ Streaming Service"
 							thumbnail={thumbProviders}
-							link="https://github.com/wilbura009/streaming_service_sorter"
+							link="https://streamez-sydux.mongodbstitch.com/"
 						>
 							An API-driven, dynamic web application designed to help users find
 							which streaming platforms host their favorite movies and shows.

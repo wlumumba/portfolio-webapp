@@ -19,7 +19,7 @@ export default function Page() {
 		<Container>
 			<Box
 				borderRadius="lg"
-				bg={useColorModeValue("teal", "whiteAlpha.200")}
+				bg={useColorModeValue("#9CCCF0", "whiteAlpha.200")}
 				p={3}
 				mb={6}
 				align="center"
